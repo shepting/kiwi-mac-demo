@@ -4,7 +4,7 @@ Using Kiwi for Mac OS X Development
 Kiwi is an excellent unit-testing framwork but doesn't have the greatest instructions for setting it up for Mac Development. Using CocoaPods and some clear instructions, it's not too bad to use. I've recorded the steps required for anyone looking to do the process themselves.
 
 ### Steps
-1. Make a new project (OS X -> Application -> Cocoa Application) [link](#step1)
+1. Make a new project (OS X -> Application -> Cocoa Application)
 1. Choose Unit Tests & ARC checkboxes
 1. Add the Podfile to the directory (also update the names in the Podfile)
 1. Run in the terminal: pod install
