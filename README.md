@@ -26,6 +26,7 @@ There will be an action sheet drop-down with options. Ensure that you have the "
 
 ### 4. Run in the terminal: pod install
 ![Create new](https://raw.github.com/shepting/kiwi-mac-demo/master/tutorial_images/4-pod_install.png)
+<img src="https://raw.github.com/shepting/kiwi-mac-demo/master/tutorial_images/4-pod_install.png" />
 
 ### 5. Edit test target (MacAppTests) build setting FRAMEWORK_SEARCH_PATHS to $(inherited)
 ![Create new](https://raw.github.com/shepting/kiwi-mac-demo/master/tutorial_images/7-change_framework_search_path.png)
