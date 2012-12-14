@@ -1,7 +1,9 @@
 Using Kiwi for Mac OS X Development
 =============
 
-Kiwi is an excellent unit-testing framwork but doesn't have the greatest instructions for setting it up for Mac Development. Using CocoaPods and some clear instructions, it's not too bad to use. I've recorded the steps required for anyone looking to do the process themselves.
+Kiwi is an excellent unit-testing framwork for iOS and Mac. Unfortunately, it was a bit of a hassle to set up for the Mac and so I created this demo project with instructions.
+
+I used CocoaPods (https://github.com/CocoaPods/CocoaPods) to do this initial install with just a few changes to add the actual test file and change one build setting.
 
 ### Steps
 1. Make a new project (OS X -> Application -> Cocoa Application)
@@ -26,7 +28,7 @@ There will be an action sheet drop-down with options. Ensure that you have the "
 
 
 ### 2. Add Podfile
-Create a file named *Podfile*. Update the target names to match those in your app (*MacApp* and *MacAppTests* will become something like *RidgeRacer* and *RidgeRacerTests*). Add whatever other pods you'd like to either target.
+Create a file named *Podfile*. Update the target names to match those in your app (*MacApp* and *MacAppTests* will become something like *RidgeRacer* and *RidgeRacerTests*). Add whatever other pods you'd like to either target. If you don't yet have CocoaPods, follow the directions here: https://github.com/CocoaPods/CocoaPods
 
 ```ruby
 
