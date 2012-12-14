@@ -56,7 +56,7 @@ $> pod install
 ### 3. Change FRAMEWORK_SEARCH_PATHS
 Open the workspace file (*MacApp.xcworkspace* in this case), select the *MacApp* project (not *Pods*), select the *MacAppTests* target, then enter the *FRAMEWORK_SEARCH_PATHS* in the search field to narrow the options down to one. Lastly, double-click the field and change the value to $(inherited).
 
-<img src="https://raw.github.com/shepting/kiwi-mac-demo/master/tutorial_images/7-change_framework_search_path.png" width=450 />
+<img src="https://raw.github.com/shepting/kiwi-mac-demo/master/tutorial_images/7-change_framework_search_path.png" width=300 />
 
 
 
@@ -103,4 +103,4 @@ SPEC_END
 ### 5. Test (cmd + U)
 Press CMD + U to run the tests. They should both fail. Update your app delegate file with two dummy methods and have applicationDidFinishLaunching: call them and the tests should pass. Done!
 
-<img src="https://raw.github.com/shepting/kiwi-mac-demo/master/tutorial_images/11-implement_methods.png" width=450 />
+<img src="https://raw.github.com/shepting/kiwi-mac-demo/master/tutorial_images/11-implement_methods.png" width=300 />
