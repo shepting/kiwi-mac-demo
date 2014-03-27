@@ -6,10 +6,8 @@ Kiwi is an excellent unit-testing framwork for iOS and Mac. Unfortunately, it wa
 The setup instructions are now on the official Kiwi wiki: https://github.com/allending/Kiwi/wiki/Up-and-Running-with-Kiwi-for-Mac
 
 
-Using Kiwi for Mac OS X Development
-=============
 
-To use Kiwi for the Mac, follow these basic steps.
+
 
 ## Short Version
 1. Make a new project using Unit Tests & ARC
