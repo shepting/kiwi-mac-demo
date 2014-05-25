@@ -1,12 +1,11 @@
 # Test podfile for Mac
 
-platform :osx
+platform :osx, '10.8'
 
 target 'MacApp', :exclusive => true do
-	pod 'JSONKit'
+  pod 'AFNetworking'
 end
 
 target 'MacAppTests', :exclusive => true do
-	pod 'Kiwi'
-	pod 'JSONKit'
+    pod 'Kiwi/XCTest'
 end
