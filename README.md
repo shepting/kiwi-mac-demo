@@ -1,7 +1,7 @@
 Using Kiwi for Mac OS X Development
 =============
 
-Kiwi is an excellent unit-testing framwork for iOS and Mac. Unfortunately, it was a bit of a hassle to set up for the Mac and so I created this demo project with instructions. I used CocoaPods to install and then changed one build setting.
+Kiwi is an excellent unit-testing framwork for iOS and Mac. Unfortunately, it was a bit of a hassle to set up for the Mac and so I created this demo project with instructions. It uses CocoaPods to install and then changes one build setting.
 
 The setup instructions are now on the official Kiwi wiki: https://github.com/allending/Kiwi/wiki/Up-and-Running-with-Kiwi-for-Mac
 
@@ -10,11 +10,10 @@ The setup instructions are now on the official Kiwi wiki: https://github.com/all
 
 
 ## Short Version
-1. Make a new project using Unit Tests & ARC
+1. Make a new project
 1. Create/Add Kiwi to existing Podfile
 1. Run (in the terminal): pod install
-1. Edit test target (MacAppTests) build setting FRAMEWORK_SEARCH_PATHS to $(inherited)
-1. Remove tests, add spec, run tests (cmd + U)
+1. Change test file to Kiwi Spec, run tests (cmd + U)
 
 Sample working project file: https://github.com/shepting/kiwi-mac-demo
 
@@ -25,10 +24,7 @@ First, create a new project in Xcode. In the sidebar on the left choose "Applica
 
 <img src="https://raw.github.com/shepting/kiwi-mac-demo/master/tutorial_images/2-cocoa_application_type.png" width=250/>
 
-There will be an action sheet drop-down with options. Ensure that you have the "Use Automatic Reference Counting" and "Include Unit Tests" boxes checked. You can see the options I chose in the screenshot.
-
-<img src = "https://raw.github.com/shepting/kiwi-mac-demo/master/tutorial_images/3-use_arc_and_unit_tests.png" width=250 />
-
+There will be an action sheet drop-down with options.
 
 
 ### 2. Add Podfile
@@ -38,15 +34,14 @@ Create a file named _Podfile_. Update the target names to match those in your ap
 
 # Test podfile for Mac
 
-platform :osx
+platform :osx, '10.8'
 
 target 'MacApp', :exclusive => true do
-  pod 'JSONKit'
+  pod 'AFNetworking'
 end
 
 target 'MacAppTests', :exclusive => true do
-	pod 'Kiwi'
-	pod 'JSONKit'
+    pod 'Kiwi/XCTest'
 end
 ```
 
@@ -59,14 +54,8 @@ $> pod install
 
 
 
-### 3. Change FRAMEWORK_SEARCH_PATHS
-Open the workspace file (_MacApp.xcworkspace_ in this case), select the _MacApp_ project (not _Pods_), select the *MacAppTests* target, then enter the *FRAMEWORK_SEARCH_PATHS* in the search field to narrow the options down to one. Lastly, double-click the field and change the value to $(inherited).
 
-<img src="https://raw.github.com/shepting/kiwi-mac-demo/master/tutorial_images/7-change_framework_search_path.png" width=300 />
-
-
-
-### 4. Remove Default Tests, Add Spec File
+### 3. Remove Default Tests, Add Spec File
 There will be two files (*MacAppTests.h* and *MacAppTests.m*) in the tests group (*MacAppTests*). You can delete these.
 
 <img src="https://raw.github.com/shepting/kiwi-mac-demo/master/tutorial_images/8-delete_default_tests.png" width=250 />
@@ -74,16 +63,16 @@ There will be two files (*MacAppTests.h* and *MacAppTests.m*) in the tests group
 Add a new spec file (*SHAppDelegateSpec.m*) to this group.
 
 ```objective-c
-#import "SHAppDelegate.h"
+#import "SJHAppDelegate.h"
 #import "Kiwi.h"
 
-SPEC_BEGIN(SHAppDelegateSpec)
+SPEC_BEGIN(SJHAppDelegateSpec)
 
 describe(@"SHAppDelegateSpec", ^{
-    __block SHAppDelegate *dm;
+    __block SJHAppDelegate *dm;
     
     beforeEach(^{
-        dm = [[SHAppDelegate alloc] init];
+        dm = [[SJHAppDelegate alloc] init];
     });
     
     context(@"application:DidFinishLaunching:", ^{
