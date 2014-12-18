@@ -20,6 +20,7 @@ Sample working project file: https://github.com/shepting/kiwi-mac-demo
 ## Long Version
 ### 1. Create a New Project
 First, create a new project in Xcode. In the sidebar on the left choose "Application" under the "Mac OS X" section.
+
 <img src="https://raw.github.com/shepting/kiwi-mac-demo/master/tutorial_images/1-create_new_project.png" width=250 />
 
 <img src="https://raw.github.com/shepting/kiwi-mac-demo/master/tutorial_images/2-cocoa_application_type.png" width=250/>
