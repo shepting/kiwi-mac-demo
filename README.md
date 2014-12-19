@@ -15,8 +15,6 @@ The setup instructions are now on the official Kiwi wiki: https://github.com/all
 1. Run (in the terminal): `pod install`
 1. Change test file to Kiwi Spec, run tests (`cmd + U`)
 
-Sample working project file: https://github.com/shepting/kiwi-mac-demo
-
 ## Long Version
 ### 1. Create a New Project
 First, create a new project in Xcode. In the sidebar on the left choose "Application" under the "Mac OS X" section.
